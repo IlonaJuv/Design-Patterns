@@ -1,0 +1,13 @@
+
+public interface Company {
+
+	BussCard bd = BussCard.getInstance();
+
+	void loadBusscard();
+
+	
+	void useBussCard();
+	
+	
+	public String checkTimeLeft();
+}

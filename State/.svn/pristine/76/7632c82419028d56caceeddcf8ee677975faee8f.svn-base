@@ -1,0 +1,53 @@
+package Classes;
+public class PokemonCharmeleon extends Pokemon {
+       
+	   // Huom! Kommenteissa toinen tapa, millä voi vaihtaa tilan näissä state-olioissa, eikä kontekstissa (silloin setPoints() otetaan pois käytöstä).  
+
+    private static PokemonCharmeleon INSTANCE = null;
+    private PokemonCharmeleon(){}
+   // private int points = 30;
+
+    public static PokemonCharmeleon getInstance() {
+        if (INSTANCE == null)
+        INSTANCE = new PokemonCharmeleon();
+        
+        return INSTANCE;
+    }
+    /*
+    @Override
+    void changeState(ContextPlayer cp, IPokemon ip){
+  		cp.changeState(ip);
+  	} */
+
+    @Override
+    void run(ContextPlayer cp) {
+        System.out.println("Charmaleon running, 3 point");
+        setPoints(cp, 3);
+
+    /*  this.points += 3;
+        if(points >= 50) {
+        	endGame(cp);
+        }*/
+    }
+    @Override
+    void fight(ContextPlayer cp) {
+  	  System.out.println("Charmaleon fighting, 3 points");
+  	  setPoints(cp, 3);
+
+  	/* this.points += 3;
+       if(points >= 50) {
+       	endGame(cp);
+       }*/
+    }
+    @Override
+    void rest(ContextPlayer cp) {
+  	  System.out.println("Charmaleon resting, 2 points");
+  	  setPoints(cp, 2);
+
+   /*  this.points += 2;
+       if(points >= 50) {
+    	 changeState(cp, PokemonCharmander.getInstance());
+       	endGame(cp);
+       }*/
+    }
+}

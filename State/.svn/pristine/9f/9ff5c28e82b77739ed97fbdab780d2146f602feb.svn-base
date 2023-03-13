@@ -1,0 +1,53 @@
+package Classes;
+
+public class PokemonCharizard extends Pokemon{
+    
+   // Huom! Kommenteissa muistissa toinen tapa, millä voi vaihtaa tilan näissä state-olioissa, eikä kontekstissa (silloin setPoints() otetaan pois käytöstä).  
+	
+    private static PokemonCharizard INSTANCE = null;
+    private PokemonCharizard(){}
+   // private int points = 10;
+
+    public static PokemonCharizard getInstance() {
+        if (INSTANCE == null)
+        INSTANCE = new PokemonCharizard();
+        
+        return INSTANCE;
+    }
+    
+    /*
+    void changeState(ContextPlayer cp, IPokemon ip){
+		cp.changeState(ip);
+	}
+*/
+    void run(ContextPlayer cp) {
+        // TODO Auto-generated method stub
+        System.out.println("Charizard running, 1 point");
+        setPoints(cp, 1);
+
+       /* this.points += 1;
+        if(this.points >=30) {
+        	changeState(cp, PokemonCharmeleon.getInstance());
+        }*/
+    }
+    void fight(ContextPlayer cp) {
+  	  System.out.println("Charizard fighting, 3 points");
+  	  setPoints(cp, 3);
+  	  
+  	 /* this.points += 3;
+  	  if(this.points >=30) {
+  		  changeState(cp, PokemonCharmeleon.getInstance());
+  	  } */
+  	  
+    }
+    void rest(ContextPlayer cp) {
+  	  System.out.println("Charizard resting, 2 points");
+  	  setPoints(cp, 2);
+  	  
+  	 /* this.points += 2;
+  	  if(this.points >=30) {
+      	changeState(cp, PokemonCharmeleon.getInstance());
+      }*/
+    }
+   
+}

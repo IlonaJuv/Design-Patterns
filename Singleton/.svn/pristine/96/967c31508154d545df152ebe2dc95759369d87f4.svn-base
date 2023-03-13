@@ -1,0 +1,29 @@
+
+public class BussCard {
+
+	private BussCard(){} 
+	
+	private static BussCard INSTANCE = null;
+	private static final int ADD_MONTH = 30;
+	private int days;
+	
+	public static BussCard getInstance(){
+		if (INSTANCE == null){
+			INSTANCE = new BussCard();
+		}
+		return INSTANCE;
+	}
+	
+	public int getTime() {
+		return days;
+	}
+	
+	public void addTime() {
+		days += ADD_MONTH;
+	}
+	
+	public void deductTime() {
+		days--;
+	}
+	
+}

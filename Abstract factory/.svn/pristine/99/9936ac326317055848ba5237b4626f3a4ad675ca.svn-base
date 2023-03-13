@@ -1,0 +1,28 @@
+package main;
+
+import Adidas.AdidasFactory;
+import Boss.BossFactory;
+import Clothes.Jasper;
+import Factory.IClothingFactory;
+import creator.Creator;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		Creator crea = new Creator();
+		//IClothingFactory clthsFac = new BossFactory();
+		IClothingFactory clthsFac = new AdidasFactory();
+		crea.setClothingFactory(clthsFac);
+		crea.constructClothes();
+
+		System.out.println(clthsFac.getClothes());
+		
+		/*
+		Jasper jspr = (Jasper) clthsFac.getClothes();
+		System.out.println(jspr);
+		*/
+		
+	}
+
+}

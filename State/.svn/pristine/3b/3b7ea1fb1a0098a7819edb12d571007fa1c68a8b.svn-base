@@ -1,0 +1,21 @@
+package Classes;
+
+public class main {
+
+    public static void main(String[] args) { 
+        ContextPlayer cont = new ContextPlayer();
+        Boolean isOn;
+        isOn = cont.getIsGameOn();
+    
+    
+        while (isOn) {
+            cont.run();
+            cont.rest();
+            cont.fight();
+            cont.rest();
+            isOn = cont.getIsGameOn();
+        }
+    }
+
+
+}

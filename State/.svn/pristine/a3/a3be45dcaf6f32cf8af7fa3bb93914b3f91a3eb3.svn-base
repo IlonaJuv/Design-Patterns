@@ -1,0 +1,28 @@
+package Classes;
+
+public class main {
+
+    public static void main(String[] args) { 
+        ContextPlayer cont = new ContextPlayer();
+        Boolean isOn;
+        isOn = cont.getIsGameOn();
+    
+        while (isOn) {
+        	  try {
+        			cont.run();
+        			Thread.sleep(1000);
+        			cont.rest();
+        			Thread.sleep(1000);
+        			cont.fight();
+        			Thread.sleep(1000);
+        			cont.rest();
+
+        		} catch (InterruptedException e) {
+        			e.printStackTrace();
+        		}
+            isOn = cont.getIsGameOn();
+        }
+    }
+
+
+}
