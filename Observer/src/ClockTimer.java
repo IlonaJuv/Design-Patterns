@@ -16,7 +16,7 @@ public class ClockTimer extends Observable implements Runnable  {
 	public String getTime() {
 		return time;
 	}
-
+	
 	private void tick() {
 		java.util.Date d = new java.util.Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
