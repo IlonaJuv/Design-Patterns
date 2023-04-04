@@ -17,7 +17,7 @@ public class Waiter {
     }
 
     public Object serveHamburger() {
-        return hamburgerBuilder.getHamburger();
+        return hamburgerBuilder.getBurger();
     }
 
 }

@@ -14,6 +14,6 @@ public class HBurger {
 
     @Override
     public String toString() {
-        return "Hesburger hamburger: " +  brgr.toString();
+        return "Hesburger burger includes: " +  brgr;
     }
 }

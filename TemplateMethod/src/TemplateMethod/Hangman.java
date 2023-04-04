@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class Hangman extends Game {
     private int currentPlayer;
-    private static final String[] WORDS = {"car", "buss", "apple", "java",  "friend" , "programmer"};
+    private static final String[] WORDS = { "car", "buss", "apple", "java",  "friend" , "programmer" };
     private String wordToGuess;
     private char[] hiddenCopyOfWordToGuess;
     private int guessesLeft;
-
 
     @Override
     void initializeGame() {

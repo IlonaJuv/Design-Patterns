@@ -5,7 +5,6 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        //Or
         Random rand = new Random();
         int[] dataToBeSorted = new int[10000];
 

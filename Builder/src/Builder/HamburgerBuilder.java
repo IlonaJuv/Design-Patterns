@@ -7,5 +7,5 @@ public interface HamburgerBuilder {
     public abstract void buildSauce();
     public abstract void buildTopping();
 
-    public abstract Object getHamburger();
+    public abstract Object getBurger();
 }

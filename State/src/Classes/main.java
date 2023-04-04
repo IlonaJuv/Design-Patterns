@@ -2,8 +2,8 @@ package Classes;
 
 public class main {
 
-    public static void main(String[] args) { 
-    	
+    public static void main(String[] args) {
+
         ContextPlayer cont = new ContextPlayer();
         Boolean isOn;
         isOn = cont.getIsGameOn();

@@ -3,10 +3,10 @@ public class main {
 
 	public static void main(String[] args) {
 		CompanyBussCardSingleton bd = CompanyBussCardSingleton.getInstance();
-		CEO ceo = new CEO();
-		Developer dev = new Developer();
-		Designer dsgn = new Designer();
-		
+		Company ceo = new CEO();
+		Company dev = new Developer();
+		Company dsgn = new Designer();
+
 		//Check that only one value
 		System.out.println(dev.checkTimeLeft());
 		

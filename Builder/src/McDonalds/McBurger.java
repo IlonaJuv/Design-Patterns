@@ -1,9 +1,6 @@
 package McDonalds;
 
 public class McBurger {
-    private String sauce;
-    private String salad;
-    private String topping;
 
     private StringBuilder mcBrgr = new StringBuilder();
 
@@ -13,6 +10,6 @@ public class McBurger {
 
     @Override
     public String toString() {
-        return "McDonald's Burger includes: " + mcBrgr.toString();
+        return "McDonald's Burger includes: " + mcBrgr;
     }
 }

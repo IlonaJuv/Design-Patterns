@@ -26,7 +26,7 @@ public class McBurgerBuilder implements HamburgerBuilder {
     }
 
     @Override
-    public Object getHamburger() {
+    public McBurger getBurger() {
         return mcBurger;
     }
 }

@@ -9,15 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
         Waiter waiter = new Waiter();
-        HamburgerBuilder  hamburgerBuilder = new HesburgerBuilder();
 
-        waiter.setBurgerBuilder(hamburgerBuilder);
+        //Luodaan konkreettinen builder
+        HesburgerBuilder hese = new HesburgerBuilder();
+        waiter.setBurgerBuilder(hese);
         waiter.constructHamburger();
 
-       // HeHamburger hamburger = (HeHamburger) hamburgerBuilder.getHamburger();
-        HBurger hamburger = (HBurger) waiter.serveHamburger();
-        System.out.println(hamburger);
+        HBurger burger = hese.getBurger();
+        System.out.println(burger);
 
+        // Tai interfacen avulla
         HamburgerBuilder mcBuilder = new McBurgerBuilder();
         waiter.setBurgerBuilder(mcBuilder);
         waiter.constructHamburger();
@@ -25,5 +26,12 @@ public class Main {
         McBurger mcBurger = (McBurger) waiter.serveHamburger();
         System.out.println(mcBurger);
 
+        //Tai hampurilaisen haku suoraan builderista
+        HamburgerBuilder heseBuilder = new HesburgerBuilder();
+        waiter.setBurgerBuilder(heseBuilder);
+        waiter.constructHamburger();
+
+        HBurger heseBurger = (HBurger) heseBuilder.getBurger();
+        System.out.println(heseBurger);
     }
 }

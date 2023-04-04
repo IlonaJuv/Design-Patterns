@@ -26,7 +26,7 @@ public class HesburgerBuilder implements HamburgerBuilder {
     }
 
     @Override
-    public Object getHamburger() {
+    public HBurger getBurger() {
         return hamburger;
     }
 }

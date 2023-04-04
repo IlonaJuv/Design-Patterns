@@ -1,7 +1,7 @@
 package Classes;
 public class PokemonCharmeleon extends Pokemon {
        
-	   // Huom! Kommenteissa muistissa toinen tapa, millä voi vaihtaa tilan näissä state-olioissa, eikä kontekstissa (silloin setPoints() otetaan pois käytöstä).  
+    // Huom! Kommenteissa muistissa toinen tapa, millä voi vaihtaa tilan näissä state-olioissa, eikä kontekstissa (silloin setPoints() otetaan pois käytöstä).
 
     private static PokemonCharmeleon INSTANCE = null;
     private PokemonCharmeleon(){}

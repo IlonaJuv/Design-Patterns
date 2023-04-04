@@ -9,6 +9,7 @@ public class main {
 
 		Thread thread = new Thread(timer);
 		DigitalClock digitalClock = new DigitalClock(timer);
+
 		thread.start();
 
 	}
