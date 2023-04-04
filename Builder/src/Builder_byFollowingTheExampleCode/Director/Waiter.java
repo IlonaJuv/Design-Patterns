@@ -1,5 +1,5 @@
-package Builder_without_concreteProducts_2ndOption;
-import Builder_without_concreteProducts_2ndOption.HamburgerBuilder;
+package Builder_byFollowingTheExampleCode.Director;
+import Builder_byFollowingTheExampleCode.Builder.HamburgerBuilder;
 
 public class Waiter {
 
@@ -10,6 +10,7 @@ public class Waiter {
     }
 
     public void constructHamburger() {
+        hamburgerBuilder.createNewBurgerProduct();
         hamburgerBuilder.buildSalad();
         hamburgerBuilder.buildSauce();
         hamburgerBuilder.buildTopping();

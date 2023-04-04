@@ -11,7 +11,6 @@ public class McBurgerBuilder implements HamburgerBuilder {
     @Override
     public void buildSauce() {
         mcBurger.append(" Carlig majo ");
-
     }
 
     @Override

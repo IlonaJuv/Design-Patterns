@@ -1,6 +1,6 @@
-package Builder_without_concreteProducts_2ndOption;
+package Builder_byFollowingTheExampleCode.Hesburger;
 
-import Builder_without_concreteProducts_2ndOption.Part;
+import Builder_byFollowingTheExampleCode.Parts.Part;
 
 public class Topping implements Part {
     private String ingredient;

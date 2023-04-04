@@ -1,7 +1,7 @@
 package Builder_without_concreteProducts_2ndOption;
 
 
-import Parts.Part;
+import Builder_without_concreteProducts_2ndOption.Part;
 
 import java.util.ArrayList;
 
