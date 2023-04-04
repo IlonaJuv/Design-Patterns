@@ -1,0 +1,65 @@
+
+public class Arvaaja implements Runnable{
+
+	private Object obj; 
+	private final Arvuuttaja arvuuttaja;
+	private final int id;
+	private boolean guessedCorrectly = false;
+
+	
+	public Arvaaja (int id, Arvuuttaja arvuuttaja) {
+		this.id = id;
+		this.arvuuttaja = arvuuttaja;
+	}
+	
+	public void Save(Arvuuttaja arvuuttaja) {
+		//this.obj = arvuuttaja.save();
+		//this.arvuuttaja = arvuuttaja;
+	}
+	public void undo(Arvuuttaja arvuuttaja) {
+		arvuuttaja.undoToLastSave(obj);
+	} 
+	/*
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+	
+		this.obj = arvuuttaja.liityPeliin();
+		while ( !arvuuttaja.getOikeaVastaus()) {
+			  try {
+		            Thread.sleep(100);
+		        } catch (InterruptedException e) {
+		            e.printStackTrace();
+		        }
+			int arvaus = (int) (Math.random()*50);
+			if (arvuuttaja.onkoArvausOikein(arvaus, obj)) {
+				System.out.print("Arvaaja " + id + " arvasi oikein");
+			} else {
+				System.out.println("Arvaaja " + id + " arvasi väärin");
+			}
+			
+		} 
+		 
+	}*/
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		this.obj = arvuuttaja.liityPeliin();
+		while (!guessedCorrectly) {
+			int arvaus = (int) (Math.random()*50);
+			if (arvuuttaja.onkoArvausOikein(arvaus, obj)) {
+				System.out.print("Arvaaja " + id + " ARVASI OIKEIN.\n");
+				guessedCorrectly = true;
+			} else {
+				System.out.println("Arvaaja " + id + " arvasi väärin.");
+			}
+			try {
+				Thread.sleep(100); // Wait a little before trying again
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		} 
+		 
+	}
+}

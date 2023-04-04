@@ -1,0 +1,69 @@
+import java.util.Random;
+
+public class Arvuuttaja {
+	
+	private int arvattava; 
+	private StringBuilder content;
+	private boolean arvauksenTila;
+	
+	public Arvuuttaja() {
+		this.arvattava = 0;
+		this.content = new StringBuilder();
+		this.arvauksenTila = false;
+	}
+/*
+	public void liityPeliin() {
+        Random rand = new Random();
+        this.arvattava = rand.nextInt(50);
+		content.append(arvattava);
+	}
+	
+	*/
+	
+	public Memento liityPeliin() {
+		  Random rand = new Random();
+	        this.arvattava = rand.nextInt(50);
+	      return new Memento(this.arvattava);
+	}
+	
+	public int getArvattava() {
+		return this.arvattava;
+	}
+	
+	public Object save() {
+		return new Memento(this.arvattava);
+	}
+	
+	
+	public void undoToLastSave(Object obj) {
+		Memento memento = (Memento) obj;
+		this.arvattava = memento.arvattava;
+	}
+	/*
+	public  boolean onkoArvausOikein(int arvaus) {
+		this.arvauksenTila = (arvaus == this.arvattava);
+		return arvaus == this.arvattava;
+	}
+	*/
+	public synchronized boolean onkoArvausOikein(int arvaus, Object mem) {
+		Memento memento = (Memento) mem;
+		this.arvauksenTila = (arvaus == memento.arvattava);
+		return arvaus == memento.arvattava;
+	}
+	
+	public synchronized boolean getOikeaVastaus() {
+		return arvauksenTila;
+	}
+	
+	
+	private class Memento  {
+		private int arvattava; 
+		
+		public Memento(int arvaus) {
+			this.arvattava = arvaus;
+		}
+		
+	}
+	
+		
+}

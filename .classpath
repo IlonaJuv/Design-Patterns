@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Abstract factory/src"/>
+	<classpathentry kind="src" path="Chain of Responsibility/src"/>
+	<classpathentry kind="src" path="Composite/src"/>
+	<classpathentry kind="src" path="Decorator/src"/>
+	<classpathentry kind="src" path="Factorymethod/src"/>
+	<classpathentry kind="src" path="Memento/src"/>
+	<classpathentry kind="src" path="Observer/src"/>
+	<classpathentry kind="src" path="Proxy/src"/>
+	<classpathentry kind="src" path="Singleton/src"/>
+	<classpathentry kind="src" path="State/src"/>
+	<classpathentry kind="src" path="Strategy/src"/>
+	<classpathentry kind="src" path="TemplateMethod/src"/>
+	<classpathentry kind="output" path="Abstract factory/bin"/>
+</classpath>
