@@ -1,5 +1,4 @@
 public class Kello implements Cloneable{
-//Tästä luokasta tehdään klooni
 
     private Viisarit aikaviisarit;
     private int tunti;
